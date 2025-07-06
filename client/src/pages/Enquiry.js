@@ -7,7 +7,6 @@ import {
   User, 
   Mail, 
   Phone, 
-  MapPin, 
   Calendar, 
   MessageSquare,
   CheckCircle,
@@ -65,7 +64,7 @@ const Enquiry = () => {
     submitEnquiry.mutate(data);
   };
 
-  const marketingConsent = watch('marketingConsent');
+  // const marketingConsent = watch('marketingConsent'); // Unused variable - commented out
 
   if (isSubmitted) {
     return (
@@ -184,7 +183,7 @@ const Enquiry = () => {
                         {...register('phone', { 
                           required: 'Phone number is required',
                           pattern: {
-                            value: /^[\+]?[1-9][\d]{0,15}$/,
+                            value: /^[+]?[1-9][\d]{0,15}$/,
                             message: 'Please enter a valid phone number'
                           }
                         })}

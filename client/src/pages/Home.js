@@ -9,10 +9,7 @@ import {
   Users, 
   Award, 
   Globe, 
-  Play,
   ArrowRight,
-  Star,
-  Clock,
   MapPin
 } from 'lucide-react';
 import HeroSection from '../components/HeroSection';

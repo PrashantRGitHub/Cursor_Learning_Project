@@ -13,7 +13,6 @@ import {
   AlertCircle,
   ArrowLeft,
   Calendar,
-  MapPin,
   User,
   Phone,
   Mail

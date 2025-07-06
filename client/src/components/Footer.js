@@ -221,18 +221,16 @@ const Footer = () => {
             <div className="text-center md:text-right">
               <h3 className="text-lg font-semibold mb-4">Download Our Apps</h3>
               <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
-                <a
-                  href="#"
+                <button
                   className="inline-flex items-center space-x-2 bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-lg transition-colors"
                 >
                   <span className="text-sm">Sattva - Meditation App</span>
-                </a>
-                <a
-                  href="#"
+                </button>
+                <button
                   className="inline-flex items-center space-x-2 bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-lg transition-colors"
                 >
                   <span className="text-sm">Elyments - Social Media</span>
-                </a>
+                </button>
               </div>
             </div>
           </div>

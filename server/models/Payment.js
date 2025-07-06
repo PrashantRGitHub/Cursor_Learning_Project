@@ -27,7 +27,6 @@ const paymentSchema = new mongoose.Schema({
   },
   stripePaymentIntentId: {
     type: String,
-    unique: true,
     sparse: true
   },
   stripeCustomerId: {
@@ -41,7 +40,6 @@ const paymentSchema = new mongoose.Schema({
   },
   transactionId: {
     type: String,
-    unique: true,
     sparse: true
   },
   receiptUrl: {
@@ -77,7 +75,7 @@ const paymentSchema = new mongoose.Schema({
 // Indexes for better query performance
 paymentSchema.index({ enquiryId: 1 });
 paymentSchema.index({ status: 1, createdAt: -1 });
-paymentSchema.index({ stripePaymentIntentId: 1 });
-paymentSchema.index({ transactionId: 1 });
+paymentSchema.index({ stripePaymentIntentId: 1 }, { unique: true, sparse: true });
+paymentSchema.index({ transactionId: 1 }, { unique: true, sparse: true });
 
 module.exports = mongoose.model('Payment', paymentSchema); 
